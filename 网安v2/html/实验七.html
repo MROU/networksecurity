@@ -1,0 +1,347 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="../functions/wlaq.css" rel="stylesheet" type="text/css" />
+<script src="../functions/jquery.js">
+
+</script>
+
+<script type="text/javascript" src="../functions/common.js"> 
+
+</script>
+
+ 
+
+<script type="application/javascript">
+$(document).ready(
+function()
+{
+$(".sy1").click(function()
+{
+     $(".zyxzdoc").slideToggle("slow");	
+ })	;
+}
+
+)
+</script>
+<style type="text/css">
+#experiment
+{
+	 
+	color:#666;
+	font-size:16px;
+	position:relative;
+	margin-left:40px;
+	top:10px;
+	border:solid 1px #c3c3c3;
+	width:680px;
+	height:auto;
+	
+}
+#boder2
+{
+	position:relative;
+	width:680px;
+	height:15px;
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>网络安全experiment</title>
+
+</head>
+
+<body bgcolor="#FFFFFF">
+<div class="identity">
+    <div class="identity"> <div id="login"> <strong>Beta</strong></div></div>
+</div>
+<div  class="site-header">
+
+<a style="text-decoration:none" href="index.html"><div  class="logo" align="center">
+网络安全
+</div>
+</a>
+</div>
+<div class="border">
+<img src="img/boder.JPG" />
+</div>
+<div class="content1">
+<div class="content11">
+ <strong>
+ 王晓菊
+<a   style="text-decoration:none" href="mailto:wangxj@ncist.edu"><font color="#666">wangxj@ncist.edu</font></a>
+</strong> 
+<h1 align="center"><font class="kcjs" color="#000000">课程介绍</font></h1>
+<div class="js" style="display:none; font-size:large" align="center"><li>课程简介</li> <li>教师介绍</li><li>教学大纲</li> <li>学习指导</li></div>
+
+<h1 align="center"><font  class="kcsy" color="#000000">课程实验</font></h1>
+<div class="sy" style="display:none; font-size:large" align="center"><li><a style="text-decoration:none" href="实验一.html"><font color="#000;">实验一</font></a></li> <li><a style="text-decoration:none" href="实验二.html"><font color="#000;">实验二</font></a></li><li><a style="text-decoration:none" href="实验三.html"><font color="#000;">实验三</font></a></li><li><a style="text-decoration:none" href="实验四.html"><font color="#000;">实验四</font></a></li> <li><a style="text-decoration:none" href="实验五.html"><font color="#000;">实验五</font></a></li><li><a style="text-decoration:none" href="实验六.html"><font color="#000;">实验六</font></a></li><li><a style="text-decoration:none" href="实验七.html"><font color="#000;">实验七</font></a></li><li><a style="text-decoration:none" href="综合实验.html"><font color="#000;">综合实验</font></a></li></div>
+
+<h1 align="center"><a href="资源下载.html" style="text-decoration:none"><font class="zyxz" color="#000000">资源下载</font></a></h1>
+<div class="xz" style="display:none; font-size:large" align="center"><li>实验一</li> <li>实验二</li><li>实验三</li><li>实验四</li> <li>实验五</li><li>实验六</li></div>
+
+<h1 align="center"><a href="课外拓展.html" style="text-decoration:none"><font color="#000000">课外拓展</font></a></h1>
+
+<h1 align="center"><a href="项目创新.html" style="text-decoration:none"><font color="#000000">项目创新</font></a></h1>
+<h1 align="center"><a href="结课辩论.html" style="text-decoration:none"><font color="#000000">结课辩论</font></a></h1>
+</div>
+</div>
+
+
+<div id="maincontent">
+
+<div id="experiment">
+<h1>实验七  PGP软件的应用</h1>
+
+ 
+
+<hr>
+
+
+<h2 class="sy1">实验七（详细指导单可以到资源下载模块下载）</h2>
+<hr />
+<p class="flip1">实验目的,学时，环境，内容</p>
+<div class="panel1">
+<pre>
+一、实验目的
+	通过利用PGP软件的使用加深理解前面1-5章所学
+    的网络数据安全技术，熟悉对称加密算法，非对称
+    加密算法和数字签名机制。
+二、实验要求
+	通过PGP软件的使用，掌握如何组合IDEA，DES或AES
+    ，RSA等算法进行数据的安全传输。
+三、实验学时
+	4学时
+四、实验内容
+	（1） PGP软件简介
+	PGP(Pretty Good Privacy)是由公钥发展而来的，
+    它是一个基于RSA公钥加密体系的文件（邮件）
+    加密软件，它可以用来对文件（邮件）加密以防
+    止非授权者阅读，还能对邮件进行数字签名而使
+    收信人可以确信邮件的发送者，并能确信邮件
+    没有被篡改。它可以提供一种安全的通信方式
+    ，事先并不需要任何保密的渠道用来传递密匙，
+    只要知道对方的公钥就可以了。它的功能强大
+    但有很快的速度，并且它的源代码是公开的。
+    现在Internet上使用PGP来进行数字签字和加密
+    邮件非常流行。通过实验达到了解PGP的原理，
+    以及熟练掌握PGP软件使用的目的。
+	PGP中的密码算法
+	PGP应用了一个混合加密算法，它包含对称密
+    钥算法、非对称密钥算法、消息报文摘要等景
+    点的密码学算法，同时还涉及数学签名的思想。
+    它为用户生成密钥对之后可以进行邮件的加密、
+    签名、解密和认证。在PGP中使用的加密算法和
+    用途如下表所示。
+	表 PGP中使用的各种加密算法和用途
+密钥名	加密算法	用途
+会话密钥	IDEA AES	对传送消息的加解密，随机生成，一次性使用
+公钥	RSA Diffie-Hellman	对会话密钥加密，收信人和发信人公用
+私钥	RSA Diffie-Hellman	对消息的杂凑值加密以形成签字，发信人专用
+口令	IDEA	对私钥加密以存储于发送端
+	（2）实验内容
+	实验的主要内容包括软件的安装，用户密钥的生成，用户公钥的交换，
+    对文件进行加密，利用PGP进行数字签名，利用PGP加密邮件等。
+</pre>
+</div>
+<hr />
+<p class="flip2">实验步骤  </p>
+<div class="panel2">
+<pre>
+		（1） 软件安装 
+	本实验中使用的PGP软件是8.1版本，首先安装英文版本然后进行汉化。
+    和其他软件一样，运行英文安装程序后，先是欢迎信息，点击"NEXT"按钮，
+    经过短暂的自解压后，进入安装界面，然后是许可协议，点击"YES"按钮，
+    进入提示安装PGP所需要的系统以及软件配置情况的界面，继续点击"NEXT"按钮，
+    出现创建用户类型的界面，选择如图8-1所示创建并设置一个新的用户信息。
+	
+	图8-1 创建新用户
+	
+	继续点击"NEXT"按钮，到了程序安装目录，再次点击"NEXT"按钮，出现选择PGP组件
+    的窗口，安装程序会检测系统内所安装的程序,如果存在PGP可以支持的程序
+    将自动选中，如图8-2所示。
+
+图8-2 选择组件
+
+	继续点击"NEXT"进入文件拷贝，拷贝完文件后，点击"Finish",重启系统即可完
+    成安装。如若要安装中文版本，在安装中文版本后重启系统即可。
+	
+
+图8-3 安装结束后重新启动
+	（2）用户创建与设置初始用户信息
+	重启后，进入系统时会自动启动PGPtray.exe。（也可以在PGPkeys界面中
+    点击keys菜单，点击new key进入PGP Key Generation Wizard界面）。这时出
+    现一个PGP Key Generation Wizard（PGP密钥生成向导），点"下一步"按钮
+    ，进入Name and Email Assignment（用户名和电子邮件分配）界面，在Full
+     name（全名）处输入想要创建的用户名，如：networksecurity，在Email 
+     address处输入用户所对应的电子邮件地址，如：network@tsinghua.edu.cn，
+     完成后点击"下一步"按钮，如图8-4所示。
+	
+图8-4  设置初始用户信息
+
+	接下来进入Passphrase Assignment（密码设置），在Passphrase处输入密码，
+    在Confirmation（确认）处再输入一次，如图8-5所示，系统要求密码长度必
+    须大于等于8位。私钥是通过这个密码保护的，因此一定要把这个密码保
+    存好。完成后点击"下一步"按钮。
+	
+
+图8-5 密码的输入与确认
+
+	这时进入Key Generation Progress（密钥生成进程），如图8-6所示，等待密钥生
+    成完毕。点击"下一步"按钮，进入Completing the PGP Key Generation Wizard
+    （完成该PGP密钥生成向导）再点击"完成"按钮，用户就创建并设置好了。
+	
+  
+图8-6 密钥生成结束
+	（3） 导出并分发公钥 
+	启动PGPkeys，将看到密钥的一些基本信息，如：Validity（有效性，PGP系统
+    检查密钥是否符合要求，如符合，就显示为绿色）、Trust（信任度）、Size（大小）
+    、Key ID（密钥ID）、Creation（创建时间）、Expiration（到期时间）等，如图8-7所示。
+	
+	
+图8-7 密钥的一些基本信息
+
+	用户其实是以一个"密钥对"形式存在的，其中包含了一个公钥和一个私钥，
+    公钥可以公开，别人可以用你的公钥对要发给你的文件或者邮件等进行加密，
+    私钥必须保密，它用来解密别人用你的公钥加密的文件或邮件。
+	现在从这个"密钥对"内导出公钥。具体操作是：单击显示刚才创建的用户，
+    再点击右键，出现下拉式快捷菜单，选择"Export…（导出）"，如图8-8所示。
+    在出现的保存对话框中选择一个目录，再点击"保存"按钮，即可导出你的
+    公钥，它是一个文件，扩展名为.asc。导出后，就可以将此公钥文件发给要
+    给你发送信息的人，告诉他们以后给你发邮件或者重要文件的时候，通过
+    PGP使用此公钥加密后再发给你，这样做能防止被人窃取后阅读而看到一
+    些个人隐私或者商业机密的东西，一旦看到没有用PGP加密过的文件，或
+    者是无法用私钥解密的文件或邮件，就说明数据传输安全出问题了。虽然
+    比以前的文件发送方式和邮件阅读方式麻烦一点，但是却能更安全的保
+    护用户的隐私或秘密。 
+	
+	
+	图8-8 在用户上点击右键，弹出下拉式菜单
+	
+	（4） 导入并设置其他人的公钥 
+	直接双击对方发送的扩展名为.asc的公钥文件，将会出现选择公钥的窗口
+    ，选好要导入的公钥后，点击"Import（导入）"按钮，即可导入PGP。如图8-9所
+    示，打开PGPkeys，就能在密钥列表里看到刚才导入的密钥。
+	
+
+图8-9 点击"Import"按钮，将公钥导入PGP
+
+8.10 导入他人公钥后的PGPKeys
+
+	（5）文件加解密
+	不用开启PGPkeys，直接在你需要加密的文件上点击右键，会看到一个包
+    含PGP的下拉式快捷菜单，进入PGP菜单组，选Encrypt（加密）如图8-11所示。
+	
+	图8-11 文件加密
+	
+	选择后将出现"PGPshell-Key Selection Dialog"对话框，如图8-12所示。
+	
+	
+图8-12 密钥选择
+
+	在密钥选择框中，可供选择的选项包括：
+文本输出：解密后以文本形式输出。 
+输入文本：选择此项，解密时将另存为文本格式。 
+粉碎原件：加密后粉碎掉原来的文件，不可恢复。 
+常规加密：自由输入密码后进行常规的对称加密。 
+"自解密文档"：继承"常规加密"，此方式也经常使用，通常加密目录下的所
+有文件。在这里你可以选择一个公钥进行加密，上面的窗口是备选的公钥，
+下面的是准备使用的公钥，你想要使用备选窗里的哪个公钥进行加密操作，
+就双击哪个，该公钥就会从备选窗口转到准备使用窗口。已经在准备使用窗
+内的，如果你不想使用它，也可通过双击的方法，使其转到备选窗口中。
+选择好公钥后，点击"确定"按钮，经过PGP的短暂处理，会在要加密的那个
+文件的同一目录中生成一个文件名不变，扩展名为.pgp的文件，这时你就
+可以将这个加密文件发送给对方了。注意，你刚才使用哪个公钥加密的，
+就只能发给该公钥所有人，别人无法解密，因为只有该公钥所有人才有解密的
+私钥。解密文件时，只要双击被加密的文件，就弹出一个窗口，要求输入保
+护私钥的密码，输入正确就可以解密了。
+（6）文件签名与验证签名
+不用开启PGPkeys，直接在你需要签名的文件上点击右键，会看到一个包
+含PGP的下拉式快捷菜单，进入PGP菜单组，选Sign（签名）如图8-12所示。
+	
+	图8-13 文件签名
+	
+	点击"Sign"后，会弹出输入密码的窗口，这个密码是建立用户时输入的
+    保护私钥的密码，即本质上是用你的私钥进行签名，如图8-13所示，输
+    入密码后，会在你要签名的那个文件的同一目录中生成一个文件名
+    不变，扩展名为.sig的文件，这时你就可以将这个签名文件发送给对方了。
+	
+	
+		图8-13 输入密码进行签名窗口
+	
+	接收方收到你签名的文件后可以用你的公钥进行解签名，来验证是
+    否是你发送来的文件。验证时，直接在你需要验证的文件上点右键，
+    会看到一个包含PGP的下拉式快捷菜单，进入PGP菜单组，选Verify
+     Signature（验证签名）如图8-14所示。
+	
+	
+	8-14 文件签名验证
+	
+	系统会用目前已知的公钥进行验证，并把验证的结果显示出来，
+    说明签名者是谁（即用哪个公钥验证成功的），如图8-15所示。
+	
+	
+	图8-15 显示签名者
+	
+	（7）邮件的加解密
+	安装了PGP软件后，在任务栏的右下角显示（锁状按钮）图标。若要
+    对邮件加密可以在OutLook Express（OE）中操作，也可以在浏览器
+    的邮箱界面进行操作。先写好邮件，然后单击右下角的图标，选
+    择其中的Current Window的Encrypt（加密），如图所示。点击"Encrypt"后
+    ，会弹出" PGPshell -Key Selection Dialog"对话框，如图8-12所示，选择
+    准备要使用的公钥，点击"OK"按钮。经过PGP的短暂处理将邮件原文加
+    密后转换为密文，然后点击发送即可。
+	
+	
+	图8-16 点击锁状图标的快捷菜单
+	
+	图8-17 邮件明文
+	
+	图8-18 加密后的邮件密文
+	注意，使用哪个公钥加密，就只能发给该公钥所有人，别人无法
+    解密，因为只有该公钥所有人才有解密的私钥。
+	解密邮件时，打开所收到的邮件窗口，单击右下角的图标，选择
+    其中的Current Window的Decrypt &Verify（解密与验证）。点击
+    "Decrypt &Verify"后，会弹出输入私钥的窗口，输入私钥密码，
+    即可显示邮件的原文，如图8-19所示。
+	
+	图8-19 解密后的信息
+	邮件加密也可将写好的邮件内容以文件的形式事先进行加密，
+    然后在邮件当中以附件的形式进行发送。接收方接收到附件后，
+    与普通文件解密一样进行文件的解密。 
+	邮件的签名和邮件的加密方法类似，只是在选择时选择"Sign"选项
+    ，然后在弹出的私钥窗口中输入私钥，PGP即可对相应的邮件内容
+    进行相应的签名。发送给接收方后，接收方点击右下角的锁状图标，
+    选择"Decrypt &Verify"选项，既可对签名的信息进行验证，如图8-2
+    0所示，因此可以保证发送方身份的真实性。
+	
+	
+图8-20 显示签名者信息
+六、主要实验仪器及材料
+	装有Windows系统的计算机，接入因特网，可以发送邮件，PGP软件。
+	
+
+
+ 
+</pre>
+
+</div>
+
+</div>
+
+
+<div class="border1">
+<img src="../img/boder.JPG" />
+</div>
+<div class="footer" align="center">
+大智若愚，求知若渴<br />
+stay hungry stay foolish
+<div  class="footer1" align="center">
+Copyright © 2013, 华北科技学院. Designs by 华北科技学院.
+
+
+</div>
+</div>
+</body>
+</html>
+

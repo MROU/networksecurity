@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="../functions/wlaq.css" rel="stylesheet" type="text/css" />
+<script src="../functions/jquery.js">
+
+</script>
+
+<script type="text/javascript" src="../functions/common.js"> 
+
+</script>
+
+
+ 
+
+<script type="application/javascript">
+$(document).ready(
+function()
+{
+$(".sy1").click(function()
+{
+     $(".zyxzdoc").slideToggle("slow");	
+ })	;
+}
+
+)
+</script>
+<style type="text/css">
+#experiment
+{
+	 
+	color:#666;
+	font-size:16px;
+	position:relative;
+	margin-left:40px;
+	top:10px;
+	border:solid 1px #c3c3c3;
+	width:680px;
+	height:auto;
+	
+}
+#boder2
+{
+	position:relative;
+	width:680px;
+	height:15px;
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>网络安全experiment</title>
+
+</head>
+
+<body bgcolor="#FFFFFF">
+<div class="identity">
+  <div class="identity"> <div id="login"> <strong>Beta</strong></div></div>
+</div>
+<div  class="site-header">
+
+<a style="text-decoration:none" href="index.html"><div  class="logo" align="center">
+网络安全
+</div>
+</a>
+</div>
+<div class="border">
+<img src="img/boder.JPG" />
+</div>
+<div class="content1">
+<div class="content11">
+ <strong>
+ 王晓菊
+<a   style="text-decoration:none" href="mailto:wangxj@ncist.edu"><font color="#666">wangxj@ncist.edu</font></a>
+</strong> 
+<h1 align="center"><font class="kcjs" color="#000000">课程介绍</font></h1>
+<div class="js" style="display:none; font-size:large" align="center"><li>课程简介</li> <li>教师介绍</li><li>教学大纲</li> <li>学习指导</li></div>
+
+<h1 align="center"><font  class="kcsy" color="#000000">课程实验</font></h1>
+<div class="sy" style="display:none; font-size:large" align="center"><li><a style="text-decoration:none" href="实验一.html"><font color="#000;">实验一</font></a></li> <li><a style="text-decoration:none" href="实验二.html"><font color="#000;">实验二</font></a></li><li><a style="text-decoration:none" href="实验三.html"><font color="#000;">实验三</font></a></li><li><a style="text-decoration:none" href="实验四.html"><font color="#000;">实验四</font></a></li> <li><a style="text-decoration:none" href="实验五.html"><font color="#000;">实验五</font></a></li><li><a style="text-decoration:none" href="实验六.html"><font color="#000;">实验六</font></a></li><li><a style="text-decoration:none" href="实验七.html"><font color="#000;">实验七</font></a></li><li><a style="text-decoration:none" href="综合实验.html"><font color="#000;">综合实验</font></a></li></div>
+
+<h1 align="center"><a href="资源下载.html" style="text-decoration:none"><font class="zyxz" color="#000000">资源下载</font></a></h1>
+<div class="xz" style="display:none; font-size:large" align="center"><li>实验一</li> <li>实验二</li><li>实验三</li><li>实验四</li> <li>实验五</li><li>实验六</li><li>实验七</li><li>综合实验</li></div>
+
+<h1 align="center"><a href="课外拓展.html" style="text-decoration:none"><font color="#000000">课外拓展</font></a></h1>
+
+<h1 align="center"><a href="项目创新.html" style="text-decoration:none"><font color="#000000">项目创新</font></a></h1>
+<h1 align="center"><a href="结课辩论.html" style="text-decoration:none"><font color="#000000">结课辩论</font></a></h1>
+</div>
+</div>
+
+
+<div id="maincontent">
+
+<div id="experiment">
+<h1>实验四（指导单中有更多的实验可以参考）</h1>
+
+ 
+
+<hr>
+
+
+<h2 class="sy1">子实验一  使用L0phtCrack破解Windows Server 2003口令</h2>
+<hr />
+<p class="flip1">实验目的,学时，环境，内容</p>
+<div class="panel1">
+<pre>
+实验目的
+	掌握Windows下口令攻击的技术和方法，以及防御措施
+实验学时
+	2学时
+实验环境
+	Windows XP（攻击方）和Windows Server 2003（受攻击方）操作系统
+    ，L0phtCrack 6.0.12
+	
+实验原理简介
+	口令破解是一个程序，它能将口令解译出来，或者让口令保护
+    失效。口令破解器一般并不是真正的去解码，因为事实上很多
+    加密算法是不可逆的。大多数口令破解器是通过尝试一个一个
+    的单词，用知道的加密算法来加密这些单词，直到发现一个单词
+    经过加密后的结果和要解密的数据一样，就认为这个单词就是要
+    找的密码了。L0phtCrack是在Windows 平台上使用的口令审计工具。
+    它能通过保存在Windows操作系统中的cryptograpic hashes列表来
+    破解用户口令。通常为了安全起见，用户的口令都是经过加密之后
+    保存在Hash列表中的。这些敏感信息如果被攻击者获得，他们不仅
+    可能会得到用户的权限，也可能会得到系统管理员的权限，这后果
+    不堪设想。L0phtCrack可通过各种不同的破解方法对用户的口令进行破解。
+	了解破解用户口令的方法是一件非常有意义的事情。最重要的是
+    可以帮助系统管理员对目前使用的用户口令的安全性能做出评估。
+    实践证明，那些没有经过测试就使用的用户口令，在黑客攻击面前
+    会显得不堪一击。此外，还能帮助用户找回遗忘的口令、检索用户
+    口令，简化用户从Windows平台移植到其他的平台的过程等。
+	L0phtCrack能直接从注册表、文件系统、备份磁盘或是在网络传输
+    的过程中找到口令。L0phtCrack开始破解的第一步是精简操作系统
+    存储加密口令的Hash列表，然后才开始口令的破解。它采用三种不同
+    的方法来实现。
+	（1）一种最快也是最简单的方法是字典攻击。L0phtCrack将字典中的词
+    逐个与口令Hash列表中的词做比较。当发现匹配的词时，显示结果，
+    即用户口令。L0phtCrack自带一个小型词库。如果需要其他字典资源可
+    以从互联网上获得。这种破解的方法，使用的字典的容量越大，破解的结果越好。
+	（2）另一种方法名为hybrid。它是建立在字典破解的基础上的。现在许多
+    用户选择口令不在单单只是由字母组成的，他常会使用诸如bogus11或annaliza！！
+    等添加了符号和数字的字符串作为口令。这类口令是复杂了一些，但通
+    过口令过滤器和一些方法，破解它也不是很困难，hybrid就能快速地对这
+    类口令进行破解。
+	（3）最后一种也是最有效的一种破解方式"暴力破解"。按道理说真正
+    的复杂的口令，用现在的硬件设备是无法破解的，但现在所谓的复杂的
+    口令一般都能被破解，只是时间长短的问题；且破解口令时间远远小于
+    管理员设置的口令的有效期。使这种方法也能了解一个口令的安全使用期限。
+        
+
+</pre>
+</div>
+<hr />
+<p class="flip2">实验步骤  </p>
+<div class="panel2">
+<pre>
+		1）获得L0phtCrack安装包，然后将L0phtCrack安装到本地。
+	（2）攻击方需要知道受攻击者的管理员用户名和口令，这样
+    才能在攻击中获取其他的用户账号。因此受攻击方应将自
+    己的管理员的用户名和口令告诉攻击方。然后攻击方开始攻击。
+	（3）单击【开始】【程序】L0phtCrack 6L0phtCrack 6，打开L0phtCrack，
+    进入到主界面，如图所示。
+	（4）单击menu中的Import Hashes，进入到Import界面，选择从远程
+    机器中获取加密后的口令，如图所示。
+	（5）单击右边的Add按钮，输入受攻击方的主机名或IP地址，访问
+    受攻击方的账户数据库，在这里输入的是192.168.202.128，如图所示。
+	（6）单击OK按钮后需要输入受攻击方的管理员用户名和密码（或者
+    是管理员授权的用户名与密码），如图所示。
+	（7）单击OK按钮后L0phtCrack就会破解受攻击方的所有用户的口令
+    信息，结果如图所示。
+	取决于密码复杂性和用户数量，L0phtCrack将花费相应的时间已破
+    解密码。使用L0phtCrack破解Windows Server 2003密码属于字典/穷举算法，
+    这也是很多暴力攻击工具使用的方法，密码稍微发杂一些，要破解就会
+    花费相当长的时间，因此适当使用较为复杂的密码可以加大地加强系统的安全性。
+ 
+</pre>
+
+</div>
+<hr />
+<h2 class="sy1">子实验二  使用John the Ripper破解Linux密码</h2>
+
+<hr />
+<p class="flip3">实验目的,学时，环境，内容</p>
+<div class="panel3">
+<pre>
+实验目的
+	了解破解linux密码的原理，从中学习如何保护Linux操作系统中的口令文件。
+实验学时
+	2学时
+实验环境
+	Linux操作系统，John the Ripper
+实验内容
+	原理简介
+	由于UNIX/Linux是Internet最流行的服务器操作系统，因此它的安全
+    性备受关注。这种安全主要靠口令实现。UNIX的口令进存储在一个加
+    密后的文本文件中，文件一般存储在/etc目录下，名称为passwd。历史
+    上，UNIX口令加密算法曾经历过几次修正，现在普遍采用DES算法。用
+    DES算法对口令文件进行25次机密。而对每次DES加密产生的结果，都
+    要用256次查找与匹配才能进行一次遍历，所以理论上要破解这样的
+    口令，其工作量是很大的。UNIX系统使用一个单向函数crypt()，来加
+    密用户的口令。单向函数crypt()从数学原理上保证了从加密的密文
+    得到加密前的明文是不可能的或是非常困难的。当用户登录时，系统
+    并不是去解密已加密的口令，而是将输入的口令明文字符串传给加
+    密函数，将加密函数的输出与/etc/passwd文件中该用户条目的PASSSWO
+    RD域进行比较，若破配成功，则允许用户登录系统。/etc/passwd文件时
+    UNIX安全的关键文件之一，该文件用于用户登录时检验用户的口令，
+    仅对root权限可写。在目前的多数UNIX系统中，口令文件都做了Shadow
+    变换，即把/etc/passwd文件中的口领域分离出来，单独存在/etc/shadow
+    文件中，并加强对shadow的保护，以增强口令安全。因而，在破解时，需
+    要做UnShadow变换，将/etc/passwd与/etc/shadow文件合二为一。
+	在口令的设置过程中，有很多个人的因素在其作用，可以利用这些因
+    素来帮助解密。由于对口令安全性的考虑，禁止把口令写在纸上，因此
+    很多人都设法使自己的口令容易记忆，这就给黑客提供了可乘之机。
+	John the Ripper是一个快速的口令破解器，支持多种操作系统，如UNIX、
+    DOS、Win32、BeOS和OpenVMS等。它涉及的主要目的是用户检查UNIX系统的弱
+    口令，支持几乎所有UNIX平台上经crypt()函数加密后的口令哈希类型，
+    也支持Kerberos AFS和Windows NT/2000/XP LM哈希等。
+            
+
+</pre>
+</div>
+<hr />
+<p class="flip4">实验步骤  </p>
+<div class="panel4">
+<pre>
+	(1) 以root身份登录到Linux。
+	(2) 使用linuxconf、useradd、adduser命令创建如下用户，并设置
+    口令，如图所示
+	(3) 获得John the Ripper源文件。
+	(4) 解开所得到的压缩文件包，得到john-1.7.8文件夹：
+	Tar-zxvf john-1.7.8.tar.gz
+	(5) 进入john-1.7.8下的src文件夹：
+	Cd /john-1.7.8/src/
+	(6) 使用make命令，将输出结果保存到type文件中：
+	Make>type
+	(7) 使用vi命令查看type文件内容，如图所示
+	
+	(8) 编译源文件：make clean linux-x86-any（这里linux-x86-any
+    是操作系统版本，可以根据图选择合适的版本，如果没有合
+    适的版本可以使用generic代替）。
+	(9) 然后输入命令cd ../run,进入run目录下，如图所示，输入
+    命令开始破解Linux密码，应用程序应该能够很快获得在前面
+    创建的密码。
+	思考：
+	比较Linux下口令安全与Windows下口令安全机制的异同点。
+</pre>
+
+</div>
+</div>
+
+
+<div class="border1">
+<img src="../img/boder.JPG" />
+</div>
+<div class="footer" align="center">
+大智若愚，求知若渴<br />
+stay hungry stay foolish
+<div  class="footer1" align="center">
+Copyright © 2013, 华北科技学院. Designs by 华北科技学院.
+
+
+</div>
+</div>
+</body>
+</html>
+

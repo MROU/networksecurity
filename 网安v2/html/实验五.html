@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="../functions/wlaq.css" rel="stylesheet" type="text/css" />
+<script src="../functions/jquery.js">
+
+</script>
+
+<script type="text/javascript" src="../functions/common.js"> 
+
+</script>
+
+ 
+
+<script type="application/javascript">
+$(document).ready(
+function()
+{
+$(".sy1").click(function()
+{
+     $(".zyxzdoc").slideToggle("slow");	
+ })	;
+}
+
+)
+</script>
+<style type="text/css">
+#experiment
+{
+	 
+	color:#666;
+	font-size:16px;
+	position:relative;
+	margin-left:40px;
+	top:10px;
+	border:solid 1px #c3c3c3;
+	width:680px;
+	height:auto;
+	
+}
+#boder2
+{
+	position:relative;
+	width:680px;
+	height:15px;
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>网络安全experiment</title>
+
+</head>
+
+<body bgcolor="#FFFFFF">
+<div class="identity">
+   <div class="identity"> <div id="login"> <strong>Beta</strong></div></div>
+</div>
+<div  class="site-header">
+
+<a style="text-decoration:none" href="index.html"><div  class="logo" align="center">
+网络安全
+</div>
+</a>
+</div>
+<div class="border">
+<img src="img/boder.JPG" />
+</div>
+<div class="content1">
+<div class="content11">
+ <strong>
+ 王晓菊
+<a   style="text-decoration:none" href="mailto:wangxj@ncist.edu"><font color="#666">wangxj@ncist.edu</font></a>
+</strong> 
+<h1 align="center"><font class="kcjs" color="#000000">课程介绍</font></h1>
+<div class="js" style="display:none; font-size:large" align="center"><li>课程简介</li> <li>教师介绍</li><li>教学大纲</li> <li>学习指导</li></div>
+
+<h1 align="center"><font  class="kcsy" color="#000000">课程实验</font></h1>
+<div class="sy" style="display:none; font-size:large" align="center"><li><a style="text-decoration:none" href="实验一.html"><font color="#000;">实验一</font></a></li> <li><a style="text-decoration:none" href="实验二.html"><font color="#000;">实验二</font></a></li><li><a style="text-decoration:none" href="实验三.html"><font color="#000;">实验三</font></a></li><li><a style="text-decoration:none" href="实验四.html"><font color="#000;">实验四</font></a></li> <li><a style="text-decoration:none" href="实验五.html"><font color="#000;">实验五</font></a></li><li><a style="text-decoration:none" href="实验六.html"><font color="#000;">实验六</font></a></li><li><a style="text-decoration:none" href="实验七.html"><font color="#000;">实验七</font></a></li><li><a style="text-decoration:none" href="综合实验.html"><font color="#000;">综合实验</font></a></li></div>
+
+<h1 align="center"><a href="资源下载.html" style="text-decoration:none"><font class="zyxz" color="#000000">资源下载</font></a></h1>
+<div class="xz" style="display:none; font-size:large" align="center"><li>实验一</li> <li>实验二</li><li>实验三</li><li>实验四</li> <li>实验五</li><li>实验六</li><li>实验七</li><li>综合实验</li></div>
+
+<h1 align="center"><a href="课外拓展.html" style="text-decoration:none"><font color="#000000">课外拓展</font></a></h1>
+
+<h1 align="center"><a href="项目创新.html" style="text-decoration:none"><font color="#000000">项目创新</font></a></h1>
+<h1 align="center"><a href="结课辩论.html" style="text-decoration:none"><font color="#000000">结课辩论</font></a></h1>
+</div>
+</div>
+
+
+<div id="maincontent">
+
+<div id="experiment">
+<h1>实验五 用Sniffer监控网络行为</h1>
+
+ 
+
+<hr>
+
+
+<h2 class="sy1">实验五（详细指导单可以到资源下载模块下载）</h2>
+<hr />
+<p class="flip1">实验目的,学时，环境，内容</p>
+<div class="panel1">
+<pre>
+实验目的
+	通过本次实验，了解Sniffer的基本作用，并能
+    通过Sniffer对指定的网络行为所产生的数据包
+    进行抓取，了解Sniffer的报文发送与监视功能。
+实验学时：
+	2 学时
+主要实验仪器及材料
+	装有Windows的计算机，网络互联环境, Sniffer pro软件。
+实验内容
+	选择网卡
+	设置捕获条件
+	抓包
+	分析数据包
+</pre>
+</div>
+<hr />
+<p class="flip2">实验步骤  </p>
+<div class="panel2">
+<pre>
+	（1）监视网卡的选择
+	启动Sniffer后，需要选择当前监视的网卡，操作步骤是
+    file=>select settings，如图8-27所示，网卡确定后，进
+    入Sniffer工作主界面，对主界面上的操作按钮加以熟
+    悉。
+
+图8-27 选择当前需要监视的网卡
+
+	（2）设置捕获条件
+	基本的捕获条件有两种：①链路层捕获，按源MAC和目
+    的MAC地址进行捕获，输入方式为十六进制连续输入，
+    如：00E0FC123456。②IP层捕获，按源IP和目的IP进行
+    捕获。输入方式为点间隔方式，如：10.107.1.1。如果
+    选择IP层捕获条件则ARP等报文将被过滤掉。
+	在Sniffer中，设定要监视的机器，以监视本机为例，
+    操作是catpture=>define filter=>address，Station 
+    1项中填入本机的MAC地址，Station 2项中填入Any，
+    就抓取本机与其它机器通信的网络信息，如图8-
+    28所示。
+
+	图8-28 抓取本机与其它机器通信的网络信息
+	
+	高级捕获条件可以捕获更复杂的数据信息，
+    在"Advance"页面下，你可以编辑你的协议捕获
+    条件，如图8-29所示。
+
+	图8-29 高级捕获条件编辑图
+	在协议选择树中可以选择需要捕获的协议条件，
+    如果什么都不选，则表示忽略该条件，捕获所有
+    协议。在捕获帧长度条件下，你可以捕获等于、
+    小于、大于某个值的报文。在错误帧是否捕获栏，
+    可以选择当网络上有错误时是否捕获。在保存过滤
+    规则条件按钮"Profiles"，可以将当前设置的过滤规
+    ，进行保存。在捕获主面板中，可以选择保存的捕获条件。
+	（3）抓包
+	启动抓包过程可按下列操作进行：capture=>start。为配合
+    抓包，此时，需要打开IE浏览器，访问一个WWW网站，连通后，
+    将窗口切换到Sniffer。而后点击菜单行capture=>stop and 
+    display ，这个操作表示停止抓包并显示，如图8-30所示。
+
+	（4）观察、分析帧
+	点击窗口下方的"Decode"选项夹，即可观察到Sniffer所捕获
+    的Mac帧，如图8-31所示，对照课程中所介绍的相应帧和包格
+    式大家进行进一步分析。
+	
+
+
+ 
+</pre>
+
+</div>
+
+</div>
+
+
+<div class="border1">
+<img src="../img/boder.JPG" />
+</div>
+<div class="footer" align="center">
+大智若愚，求知若渴<br />
+stay hungry stay foolish
+<div  class="footer1" align="center">
+Copyright © 2013, 华北科技学院. Designs by 华北科技学院.
+
+
+</div>
+</div>
+</body>
+</html>
+

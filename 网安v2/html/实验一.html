@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="../functions/wlaq.css" rel="stylesheet" type="text/css" />
+<script src="../functions/jquery.js">
+
+</script>
+
+<script type="text/javascript" src="../functions/common.js"> 
+</script>
+ 
+
+<script type="application/javascript">
+$(document).ready(
+function()
+{
+$(".sy1").click(function()
+{
+     $(".zyxzdoc").slideToggle("slow");	
+ })	;
+}
+
+)
+</script>
+<style type="text/css">
+#experiment
+{
+	 
+	color:#666;
+	font-size:16px;
+	position:relative;
+	margin-left:40px;
+	top:10px;
+	border:solid 1px #c3c3c3;
+	width:680px;
+	height:900px;
+	
+}
+#boder2
+{
+	position:relative;
+	width:680px;
+	height:15px;
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>网络安全experiment</title>
+
+</head>
+
+<body bgcolor="#FFFFFF">
+<div class="identity">
+   <div class="identity"> <div id="login"> <strong>Beta</strong></div></div>
+</div>
+<div  class="site-header">
+
+<a style="text-decoration:none" href="index.html"><div  class="logo" align="center">
+网络安全
+</div>
+</a>
+</div>
+<div class="border">
+<img src="img/boder.JPG" />
+</div>
+<div class="content1">
+<div class="content11">
+ <strong>
+ 王晓菊
+<a   style="text-decoration:none" href="mailto:wangxj@ncist.edu"><font color="#666">wangxj@ncist.edu</font></a>
+</strong> 
+<h1 align="center"><font class="kcjs" color="#000000">课程介绍</font></h1>
+<div class="js" style="display:none; font-size:large" align="center"><li>课程简介</li> <li>教师介绍</li><li>教学大纲</li> <li>学习指导</li></div>
+
+<h1 align="center"><font  class="kcsy" color="#000000">课程实验</font></h1>
+<div class="sy" style="display:none; font-size:large" align="center"><li><a style="text-decoration:none" href="实验一.html"><font color="#000;">实验一</font></a></li> <li><a style="text-decoration:none" href="实验二.html"><font color="#000;">实验二</font></a></li><li><a style="text-decoration:none" href="实验三.html"><font color="#000;">实验三</font></a></li><li><a style="text-decoration:none" href="实验四.html"><font color="#000;">实验四</font></a></li> <li><a style="text-decoration:none" href="实验五.html"><font color="#000;">实验五</font></a></li><li><a style="text-decoration:none" href="实验六.html"><font color="#000;">实验六</font></a></li><li><a style="text-decoration:none" href="实验七.html"><font color="#000;">实验七</font></a></li><li><a style="text-decoration:none" href="综合实验.html"><font color="#000;">综合实验</font></a></li></div>
+
+<h1 align="center"><a href="资源下载.html" style="text-decoration:none"><font class="zyxz" color="#000000">资源下载</font></a></h1>
+<div class="xz" style="display:none; font-size:large" align="center"><li>实验一</li> <li>实验二</li><li>实验三</li><li>实验四</li> <li>实验五</li><li>实验六</li></div>
+
+<h1 align="center"><a href="课外拓展.html" style="text-decoration:none"><font color="#000000">课外拓展</font></a></h1>
+
+<h1 align="center"><a href="项目创新.html" style="text-decoration:none"><font color="#000000">项目创新</font></a></h1>
+<h1 align="center"><a href="结课辩论.html" style="text-decoration:none"><font color="#000000">结课辩论</font></a></h1>
+</div>
+</div>
+
+
+<div id="maincontent">
+
+<div id="experiment">
+<h1>实验一</h1>
+
+ 
+<p class="flip">实验一软件，指导单</p>
+<div class="panel">
+<pre>
+一，实验目的
+   用高级语言编制基本文本加解密程序。
+二.实验学时
+   4学时 10.1.10.224:19
+三.实验环境
+   装有Windows 系统的计算机和相应的程序编程环境   
+四.实验内容
+（1）替换加密技术
+ ①用凯撒密码实现数据加解密。
+ ②用维吉耐尔加密法实现数据加解密。
+ ③用Vernam加密法实现数据加解密。
+ ④用异或性质实现数据加解密。
+（2）置换加密技术
+ ①用栅栏置换加密技术实现数据加解密。
+ ②用单轮分栏式置换加解密技术实现数据加解密。
+（3）DES算法模型的实现。
+（4）RSA算法模型的实现。
+（5）用DES和RSA混合加密技术实现对数据的加解密。
+</pre>
+</div>
+<hr>
+
+
+<h2 class="sy1">实验步骤(深入了解请到资源下载里下载的实验指导单)</h2>
+<hr />
+<p class="flip1">凯撒加密（简要）</p>
+<div class="panel1">
+<pre>
+在凯撒加密方法中，消息中每个字母换成在它后面三个字母的字母，例如，明文ATTACK
+AT FIVE变成了密文DWWDFNDWILYH。最后的三个字母反过来用最前面的字母替换，
+因此凯撒加密方法本质是循环替换，在这里密钥是数字3.密文字母与明文字母
+不一定相隔三个字母，可以相隔任意多个字母，则可以提高破译的难度。密钥是
+1－25中其中的任一个数字这就是改进的凯撒加密方法。
+ 
+</pre>
+</div>
+<hr />
+<p class="flip2">维吉耐尔加密加密（简要）</p>
+<div class="panel2">
+<pre>
+Vigenere（维吉耐尔）加密法是一种多码替换加密法，Vigenere密码就是把26个字母
+循环移位，排列在一起，形成26×26的方阵表,下面以Vigenere密码加密法为例说明
+多码替换加密法： 以YOUR为密钥，用Vigenere密码加密法加密明文HOWAREYOU，
+则整个加密过程为：
+（1）密钥重复进行组合，直到跟明文长度（个数）相同，每个密钥字符将加密一个
+明文字符，即对应如下：P=HOWAREYOU （明文）,K=YOURYOURY （密钥的重复组合）
+（2）加密，在Vigenere表中，以明文字母选择行，以密钥字母选择列，两者的交点
+就是加密生成的密码文字母，最终加密的结果为：Ek(P)=FCQRPSSFS.
+（3）解密：在Vigenere表中，以密钥字母选择列，从中找到密文字母，密文字母所在行
+的行名即为明文字母。
+ 
+</pre>
+</div>
+<hr />
+<p class="flip3">Vernam加密（简要）</p>
+<div class="panel3">
+<pre>
+① 按递增顺序把每个明文字母数字化，例如A=1，B=2，…Z=26，
+② 对密钥中每个字母进行相同处理。
+③ 将明文中的每个字母与密钥中的相应字母相加，设和为s。
+④ 如果s>26，执行赋值语句：s=s mod 26。
+将s变成相应的字母，从而得到密文。
+ 
+</pre>
+</div>
+<hr />
+<p class="flip4">异或加密（简要）</p>
+<div class="panel4">
+<pre>
+实验利用异或逻辑的一个有趣性质：两个数异或的结果再异或其中的一个
+，结果得另一个。即当a^b=c，则c^b=a，即同一个数对a连续进行两次异或的
+结果还是a。利用此性质可以实现简单的字符串加解密。
+ 
+</pre>
+</div>
+<hr />
+<p class="flip5">栅栏置换加密（简要）</p>
+<div class="panel5">
+<pre>
+栅栏 (Rail Fence)加密过程是：把要被加密的消息按照锯齿状一上一下的
+写法写出来。因为加密过程的几何形状类似于栅栏的上半部分，因此称
+为栅栏加密,解密过程是：先写第一行，再写第二行，每行字母的个数的
+决定是按照下面的原则进行的：字母总数是偶数时第一行和第二行各一
+半，奇数时第一行多一个。然后按加密对角线序列读出。
+ 
+</pre>
+</div>
+<hr />
+<p class="flip6">单轮分栏式置换加密（简要）</p>
+<div class="panel6">
+<pre>
+将明文消息一行一行地写入预定长度的矩形中(需要事先确定列数)。
+然后一列一列读消息，但不一定按1、2、3列的自然顺序读，也可以按
+随机顺序读，得到的消息就是密文消息。
+ 
+</pre>
+</div>
+<hr />
+<p class="flip7">DES算法（简要）</p>
+<div class="panel7">
+<pre>
+DES以64位为分组对数据加密，主要步骤有6步，如图2-6所示，第1步输入64位明文；
+第2步将64位明文块送入初始置换函数进行初始置换；第3步将初始置换后的内容
+分为两块，分别称为左明文(L0)和右明文(R0)，各32位；第4步每个左明文与右明
+文经过16轮加密过程；第5步将左明文与右明文重接起来，对组成的块进行最终置
+换；第6步输出64位密文。
+ 
+</pre>
+</div>
+<hr />
+<p class="flip8"> RSA算法（简要）</p>
+<div class="panel8">
+<pre>
+
+（1）选择两个大素数P和Q。
+
+（2）计算N=P*Q。
+   
+（3）选择一个公钥（即加密密钥）E，使其不是(P-1)与(Q-1)的因子。
+
+（4）选择私钥（即解密密钥）D，满足下列条件：
+
+（5）加密时，从明文PT计算密文CT：
+	  
+（6）将密文CT发送给接收方。
+	    
+（7）解密时，从密文CT计算明文PT：
+	 PT=CTD mod N。
+
+ 
+</pre>
+</div>
+</div>
+</div>
+
+<div class="border1">
+<img src="../img/boder.JPG" />
+</div>
+<div class="footer" align="center">
+大智若愚，求知若渴<br />
+stay hungry stay foolish
+<div  class="footer1" align="center">
+Copyright © 2013, 华北科技学院. Designs by 华北科技学院.
+
+
+</div>
+</div>
+</body>
+</html>

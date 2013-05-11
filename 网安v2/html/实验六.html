@@ -1,0 +1,303 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="../functions/wlaq.css" rel="stylesheet" type="text/css" />
+<script src="../functions/jquery.js">
+
+</script>
+
+<script type="text/javascript" src="../functions/common.js"> 
+
+</script>
+
+ 
+
+<script type="application/javascript">
+$(document).ready(
+function()
+{
+$(".sy1").click(function()
+{
+     $(".zyxzdoc").slideToggle("slow");	
+ })	;
+}
+
+)
+</script>
+<style type="text/css">
+#experiment
+{
+	 
+	color:#666;
+	font-size:16px;
+	position:relative;
+	margin-left:40px;
+	top:10px;
+	border:solid 1px #c3c3c3;
+	width:680px;
+	height:auto;
+	
+}
+#boder2
+{
+	position:relative;
+	width:680px;
+	height:15px;
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>网络安全experiment</title>
+
+</head>
+
+<body bgcolor="#FFFFFF">
+<div class="identity">
+    <div class="identity"> <div id="login"> <strong>Beta</strong></div></div>
+</div>
+<div  class="site-header">
+
+<a style="text-decoration:none" href="index.html"><div  class="logo" align="center">
+网络安全
+</div>
+</a>
+</div>
+<div class="border">
+<img src="img/boder.JPG" />
+</div>
+<div class="content1">
+<div class="content11">
+ <strong>
+ 王晓菊
+<a   style="text-decoration:none" href="mailto:wangxj@ncist.edu"><font color="#666">wangxj@ncist.edu</font></a>
+</strong> 
+<h1 align="center"><font class="kcjs" color="#000000">课程介绍</font></h1>
+<div class="js" style="display:none; font-size:large" align="center"><li>课程简介</li> <li>教师介绍</li><li>教学大纲</li> <li>学习指导</li></div>
+
+<h1 align="center"><font  class="kcsy" color="#000000">课程实验</font></h1>
+<div class="sy" style="display:none; font-size:large" align="center"><li><a style="text-decoration:none" href="实验一.html"><font color="#000;">实验一</font></a></li> <li><a style="text-decoration:none" href="实验二.html"><font color="#000;">实验二</font></a></li><li><a style="text-decoration:none" href="实验三.html"><font color="#000;">实验三</font></a></li><li><a style="text-decoration:none" href="实验四.html"><font color="#000;">实验四</font></a></li> <li><a style="text-decoration:none" href="实验五.html"><font color="#000;">实验五</font></a></li><li><a style="text-decoration:none" href="实验六.html"><font color="#000;">实验六</font></a></li><li><a style="text-decoration:none" href="实验七.html"><font color="#000;">实验七</font></a></li><li><a style="text-decoration:none" href="综合实验.html"><font color="#000;">综合实验</font></a></li></div>
+
+<h1 align="center"><a href="资源下载.html" style="text-decoration:none"><font class="zyxz" color="#000000">资源下载</font></a></h1>
+<div class="xz" style="display:none; font-size:large" align="center"><li>实验一</li> <li>实验二</li><li>实验三</li><li>实验四</li> <li>实验五</li><li>实验六</li><li>实验七</li><li>综合实验</li></div>
+
+<h1 align="center"><a href="课外拓展.html" style="text-decoration:none"><font color="#000000">课外拓展</font></a></h1>
+
+<h1 align="center"><a href="项目创新.html" style="text-decoration:none"><font color="#000000">项目创新</font></a></h1>
+<h1 align="center"><a href="结课辩论.html" style="text-decoration:none"><font color="#000000">结课辩论</font></a></h1>
+</div>
+</div>
+
+
+<div id="maincontent">
+
+<div id="experiment">
+<h1>实验六  在Windows下搭建入侵检测平台</h1>
+
+ 
+
+<hr>
+
+
+<h2 class="sy1">实验六（详细指导单可以到资源下载模块下载）</h2>
+<hr />
+<p class="flip1">实验目的,学时，环境，内容</p>
+<div class="panel1">
+<pre>
+实验目的
+	掌握在Windows中搭建基于Snort的入侵检测系统（IDS），
+    熟悉简单的配置方法，能够使用IDS检测并分析网络中的数据流。
+实验学时
+	2-4学时
+实验环境
+	1. 硬件环境
+	装有Windows XP和Red Hat Linux 9.0双系统PC机一台。
+	网络中包含16口hub一个。
+	装有Windows 2000 Server的PC机一台，作为网络服务器。
+	2. 软件环境
+	(1) Acid-0.9.6b23.tar.gz——基于PHP的入侵检测数据库分析控制台
+	http://www.cert.org/kb/acid
+	apache_2.0.46-win32-x86-no_src.msi——Windows版本的Apache
+     Web服务器http://www.apache.org
+	jpgraph-1.12.2.tar.gz——PHP图形库
+	http://www.aditus.nu/jpgraph
+	mysql-4.0.13.win.zip——Windows版本的MySQL数据库服务器
+	http://www.mysql.com
+	snort-2_0_0.exe——Windows版本的Snort安装包
+	http://www.snort.org
+	WinPcap_3_0.exe——网络数据包截取驱动程序
+	http://winpcap.polito.it
+实验内容
+	安装Windows版本的Apache Web服务器
+	安装snort
+	安装MYSQL
+	安装基于PHP的入侵检测数据库分析控制台
+	安装Wincap和配置Snort
+	配置并运行snort
+	原理简介
+	在实际应用环境中，入侵检测是防火墙的护理补充，帮助
+    系统对付网络攻击，扩展了系统管理员的安全管理能力，
+    包括安全审计监视、进攻识别和响应，提高了信息安全基
+    础结构的完整性。入侵检测被认为是防火墙之后的另一
+    道安全闸门。在不影响网络性能的情况下，IDS能对网络
+    进行监测，从而提供对内部的攻击、外部攻击和误操作进
+    行实时监控。入侵检测也是保障系统动态安全的核心技术
+    之一。误用检测和异常检测作为两大类入侵检测技术，各
+    有所长，又在技术上互补。误用检测是建立在使用某种
+    模式或者特征编码方法对任何一支攻击进行描述这一理
+    论基础上的；异常检测则是通过建立一个"正常活动"的系
+    统用户的正常轮廓，凡是偏离了该正常轮廓的行为就认为
+    是入侵。误用检测精度高，却无法检测新的攻击；异常检测
+    可以检测新的攻击，却有比较高的误报警率。
+	目前的入侵检测产品中，Cisco的NetRanger，ISS的RealSecure
+    都采用的是误用检测的方法；AT&T的computer Watch，NAI的
+    CyberCop则是基于异常检测技术。SRI的IDES、NIDES以及Securenet 
+    Corp的Securenet同时采用了以上两种技术。
+	Snort是一个强大的基于误用检测的轻量级网络入侵检测系统。
+    它具有实时数据流量分析和日志IP网络数据包的能力，能够
+    进行协议分析，对内容进行搜索/匹配。它能够检测各种不同的
+    攻击方式，对攻击进行实时报警。
+</pre>
+</div>
+<hr />
+<p class="flip2">实验步骤  </p>
+<div class="panel2">
+<pre>
+	实验步骤
+	Snort可以运行在UNIX/Windows 32平台上。第一步就是
+    要在Windows下完成入侵检测系统的安装与配置。
+	1. 首先安装Apache_2.0.46 for Windows
+	（1）选择定制安装，安装路径修改为c:\apache。安装程
+    序会自动建立c:\apache2目录，继续以完成安装。
+	注意：安装时，如果已经安装了IIS并且启动了Web Server，
+    则会与Apache Web Server冲突。因为IIS的Web Server默认
+    在TCP80 80端口监听，可以修改Apache Web Server为其他端口。
+	（2）安装完成后首先修改c:\apache2\conf\httpd.conf.
+	（3）定制安装完成后，Apache Web Server默认在8080端口
+    监听，修改为其他不常用的高端端口。
+    修改listen 8080为listen 50080
+   安装Apache为服务方式运行。
+   运行命令c:\apache2\bin\apache –k install。
+	（4）添加Apache对PHP的支持。
+    解压缩php-4.3.2-win32.zip至c:\php
+    复制php4ts.dll至%systemroot%、system32.
+    复制php.ini-dist至%systemroot%、php.ini。
+    修改php.iniextension=php_gd2.dll，同时复
+    制c:\php\extension\php_gd2.dll至%systemroot%\.
+	（5）启动Apache服务。
+	运行net start apache2命令。
+	在c:\apache2\dtdocs目录下新建test.php。test.php
+    文件内容如图所示。
+	可以访问http://192.168.0.15:50080/test.php测试PHP
+    是否安装成功。
+	2. 安装snort_2_0_0
+	直接双击snort_2_0_0.exe安装文件。Snort将自动使用
+    默认安装路径c:\snort，如图所示。
+	3. 安装MYSQL
+	（1）默认安装MYSQL至c:\ MYSQL，安装MYSQL为服务方式，
+    运行c:\ MYSQL\bin\MYSQLd-nt install启动MYSQL服务，
+    如图所示。
+	（2）运行net start mysql，启动服务
+	注意：Windows 2003 Server下如果出现不能启动MYSQL
+    的情况，新建my.ini内容如图所示。注意其中的basedir
+    和datadir目录是否指向了正确的目录，然后把my.ini
+    复制到%systemroot%目录下就可以了。
+	（3）配置MYSQL。创建一个MYSQL.bat文件，文件中的操作
+    包括以下几个步骤。
+	为默认root账号添加口令。
+	删除默认的any@%账号。
+	删除默认的any@localhost账号。
+	删除默认的root@%账号。
+	如图所示，这样只允许root从localhost连接。
+	（4）随后，在文件中加入以下的部分。
+	① 建立Snort运行必须的snort库和snort_archive库：
+	mysql>creat database snort
+	mysql>creat database snort_archive
+	② 使用c:\snort\contrib目录下的creat_mysql脚本建
+    立Snort运行必须的数据表：
+	C:\mysql\bin\mysql –D snort –u root –p<x:\snort\contrib\create_mysql
+	C:\mysql\bin\mysql –D snort_archive -u root 
+    –p<x:\snort\contrib\create_mysql
+	4.安装ACID
+	（1）加压缩acid-0.9.6b23.tar.gz至c:\apache2\htdocs\acid目录下。
+	（2）按照下面的方式修改acid_conf.php文件。
+
+	5. 安装Wincap和配置Snort
+	编辑c:\snort\etc\snort.conf:
+	（1）把"#var HOME_NET 10.1.1.0/24"改成"var HOME_NET 192.168.0.0/24"
+    这是内部局域网的地址，要把前面的#号去掉。
+	（2）把"var RULE_PATH../rules"改成"var RULE_PATH/etc/snort"。
+	（3）把"#output database:log,mysql,user=root password=test dbname=db 
+    host=localhost"改成"output database:log,mysql,user=root password=123456
+     dbname=snort host=localhost"，即把原来默认的密码改成自己的密码，
+     并把前面的#号去掉。
+	（4）把以下行前面的#号删除，如图所示。
+
+	（5）其他需要修改的地方。
+	将include classification.config以及include reference.config
+    改为绝对路径，如图所示。
+	6. 设置Snort输出alert到MYSQL Server
+	（1）编辑c:\snort\etc\snort.conf
+	Output database:alert,mysql,host=localhost user=snort passwoed=snort dbname=snort
+	Encoding=hex detail=full
+	（2）测试Snort是否正常工作
+	C:\snort\bin>snort –c 
+    "c:\snort\etc\smort.conf" 
+    –l "c:\snort\logs"-d –e –X
+	-X 参数用于在数据链路层记录raw packet数据。
+	-d 参数记录一个用曾的数据。
+	-e 参数显示/记录第二层报文头数据
+	-c 参数用以指定Snort的配置文件的路径。
+	（3）按下Ctrl+C键之后将停止Snort的工作，其结果如图所示。
+	7. 增加Snort页面启动管理功能
+	（1）SnortCenter是一个基于Web的Snort探针和规则管理系统，用于远程修
+    改Snort探针的配置，启动、停止探针，编辑、分发Snort特征码规则。
+	下载地址：http://users.pandora.be/larc/download/，如图所示。
+	（2）下载完毕后，在linux环境下执行以下命令。
+	cp snortcenter-v1.0-RC1.tar.gz /user/local/apache/htdocs
+	tar zxvf snortcenter-v1.0-Rc1.tar.gz
+	mv www sc
+	vi sx.php
+	在sc.php文件中更改以下内容。
+	？？？？
+	（3）修改好后，保存退出。
+	然后创建SnortCenter的数据库，执行如下命令。
+	Mysql –uroot-p123456
+	Creat database snortcenter;
+	quit
+	（4）随后在浏览器中输入"http://192.168.0.11/sc",它会自动创
+    建数据表，然后再次登录会要求输入用户名和密码，初识是
+    admin和change，如图所示。
+	（5）然后安装snortcenter-agent-v1.0-RC1.tar.gz.
+	cp snortcenter-agent-v1.0-RC1.tar.gz /opt
+	cd /opt
+	tar zxvf snortcenter-agent-v1.0-RC1.tar.gz
+	cd sensor
+	./setup.sh
+	cp /etc/snort.conf /etc/snort.eth0.conf
+（6）通过菜单项可以选择增加一个嗅探器
+	
+
+
+ 
+</pre>
+
+</div>
+
+</div>
+
+
+<div class="border1">
+<img src="../img/boder.JPG" />
+</div>
+<div class="footer" align="center">
+大智若愚，求知若渴<br />
+stay hungry stay foolish
+<div  class="footer1" align="center">
+Copyright © 2013, 华北科技学院. Designs by 华北科技学院.
+
+
+</div>
+</div>
+</body>
+</html>
+
